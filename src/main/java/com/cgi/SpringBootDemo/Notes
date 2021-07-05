@@ -1,0 +1,20 @@
+@Scope(value="prototype") :the moment you say prototype the instance or obj will not be created by default for you.
+it will be created when you ask for a bean or getBean() : 2 times obj created as we asked getBean two times. 
+So object ondefault not created in spring container
+
+
+	@Autowired: when we specify this as Autowired then only we get the bean or obj of laptop from the Spring Container 
+
+		   context is the spring container here.and this gives 2 types of beans userdefined beans and AutoConfigure beans 
+		   Auto configure Beans :the spring container makes an assumption that you require certain number of beans and it will provide you those
+		   To make your classes to create objects by container we need to use configuration for that : @Component, @Autowired .......
+		   context will initialize the container and during initialization it creates the objects for the components
+		   bean means object
+
+@Component  //this will create an object in the Spring container and to get the object of this they need to use @Autowired
+
+	default name of Alien is alien in spring container
+					Laptop is laptop
+					
+@Autowired : it bydefault searches by type 
+@Qualifier : it by default searches by name
